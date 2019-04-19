@@ -1,9 +1,7 @@
 package lesson6;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
+import java.sql.SQLOutput;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -22,7 +20,7 @@ public class Main {
 //        System.out.println(list.size() + " " + list.isEmpty());
 //        System.out.println(containts);
 
-        Set<String> set = new HashSet<>();
+/*        Set<String> set = new HashSet<>();
         set.add("one");
         set.add("two");
         set.add("the");
@@ -41,6 +39,30 @@ public class Main {
             System.out.println(s+" "+s);
         }
 
-        System.out.println(set);
+        System.out.println(set);*/
+
+        Map<String, Car> map = new HashMap<>();
+
+        //create
+        map.put("Audi", new Car("Audi"));
+        map.put("opel", new Car("Opel corsa"));
+        map.put("zaz", new Car("Mersedes"));
+
+        //read
+        Car audi = map.get("Audi");
+        Car vaz = map.get("Vaz");
+
+        //update
+        map.put("zaz", new Car("zaporojets"));
+
+        //delete
+        Car zaz = map.remove("zaz");
+        map.remove("zaz",new Car("opl12"));
+
+        System.out.println(audi);
+        System.out.println(vaz);
+
+
+
     }
 }
